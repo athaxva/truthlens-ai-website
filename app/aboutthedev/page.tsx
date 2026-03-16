@@ -19,14 +19,15 @@ export default function AboutTheDeveloper() {
           </p>
 
           <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight mb-6">
-            Meet the team behind
+            Meet the developers behind
             <br />
             <span className="text-muted-foreground">TRUTHLENS.AI</span>
           </h1>
 
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            TRUTHLENS.AI is built by developers focused on AI, security,
-            and detecting manipulated media using machine learning.
+            TRUTHLENS.AI is a deepfake detection project built using artificial
+            intelligence techniques to identify manipulated images and synthetic
+            media.
           </p>
         </motion.div>
 
@@ -47,14 +48,14 @@ export default function AboutTheDeveloper() {
             </h2>
 
             <p className="text-sm text-accent mb-4">
-              Founder • AI Security Research
+              Developer • TRUTHLENS.AI
             </p>
 
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Atharva Pathak is the creator of TRUTHLENS.AI, an AI-powered
-              deepfake detection system focused on identifying manipulated
-              images. His work focuses on AI safety, security research,
-              and building practical tools to detect synthetic media.
+              Developer of TRUTHLENS.AI who worked on designing and building the
+              AI-powered deepfake detection system. Contributed to model
+              development, system architecture, and deployment of the platform
+              for detecting manipulated media.
             </p>
 
             <div className="flex gap-4 text-sm">
@@ -87,23 +88,23 @@ export default function AboutTheDeveloper() {
             className="p-8 rounded-2xl border border-border bg-card/50"
           >
             <h2 className="text-2xl font-semibold mb-3">
-              Developer 2 Name
+              Harsh Dharnidharka
             </h2>
 
             <p className="text-sm text-accent mb-4">
-              AI / Backend Developer
+              Developer • TRUTHLENS.AI
             </p>
 
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Co-developer of TRUTHLENS.AI responsible for backend
-              infrastructure, model integration, and system deployment.
-              Focused on building scalable AI pipelines and backend
-              systems for machine learning applications.
+              Developer of TRUTHLENS.AI who collaborated on the design and
+              implementation of the deepfake detection system, contributing to
+              backend development, AI model integration, and deployment of the
+              platform.
             </p>
 
             <div className="flex gap-4 text-sm">
               <a
-                href="#"
+                href="https://github.com/Harsh251005/"
                 target="_blank"
                 className="underline"
               >
@@ -111,7 +112,7 @@ export default function AboutTheDeveloper() {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/harsh-dharnidharka/"
                 target="_blank"
                 className="underline"
               >
