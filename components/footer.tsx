@@ -10,16 +10,19 @@ export function Footer() {
             <p className="text-xl font-semibold tracking-tight mb-2">
               TRUTHLENS<span className="text-accent">.AI</span>
             </p>
+
             <p className="text-sm text-muted-foreground">
               Protecting truth in the age of synthetic media.
             </p>
+
             <p className="text-xs text-muted-foreground mt-2">
               Built by Atharva Pathak & Harsh Dharnidharka
             </p>
           </div>
 
+          {/* Social links */}
           <div className="flex items-center gap-6">
-            
+
             <a
               href="https://github.com/athaxva"
               target="_blank"
@@ -35,7 +38,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="LinkedIn"
+              aria-label="Atharva LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
             </a>
@@ -45,7 +48,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Partner LinkedIn"
+              aria-label="Harsh LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
             </a>
@@ -63,11 +66,26 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Bottom section */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} TRUTHLENS.AI. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} TRUTHLENS.AI. All rights reserved.</p>
+
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
+
+            <a
+              href="/privacy-policy"
+              className="hover:text-foreground transition-colors"
+            >
+              Privacy Policy
+            </a>
+
+            <a
+              href="/terms-of-service"
+              className="hover:text-foreground transition-colors"
+            >
+              Terms of Service
+            </a>
+
           </div>
         </div>
       </div>
