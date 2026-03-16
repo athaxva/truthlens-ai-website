@@ -41,8 +41,18 @@ export default function AboutTheDeveloper() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="p-8 rounded-2xl border border-border bg-card/50"
+            className="p-8 rounded-2xl border border-border bg-card/50 text-center"
           >
+
+            {/* Photo */}
+            <div className="flex justify-center mb-6">
+              <img
+                src="/atharva.jpg"
+                alt="Atharva Pathak"
+                className="w-28 h-28 rounded-full object-cover border border-border"
+              />
+            </div>
+
             <h2 className="text-2xl font-semibold mb-3">
               Atharva Pathak
             </h2>
@@ -58,7 +68,7 @@ export default function AboutTheDeveloper() {
               for detecting manipulated media.
             </p>
 
-            <div className="flex gap-4 text-sm">
+            <div className="flex justify-center gap-4 text-sm">
               <a
                 href="https://github.com/athaxva"
                 target="_blank"
@@ -85,8 +95,18 @@ export default function AboutTheDeveloper() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="p-8 rounded-2xl border border-border bg-card/50"
+            className="p-8 rounded-2xl border border-border bg-card/50 text-center"
           >
+
+            {/* Photo */}
+            <div className="flex justify-center mb-6">
+              <img
+                src="/harsh.jpg"
+                alt="Harsh Dharnidharka"
+                className="w-28 h-28 rounded-full object-cover border border-border"
+              />
+            </div>
+
             <h2 className="text-2xl font-semibold mb-3">
               Harsh Dharnidharka
             </h2>
@@ -102,7 +122,7 @@ export default function AboutTheDeveloper() {
               platform.
             </p>
 
-            <div className="flex gap-4 text-sm">
+            <div className="flex justify-center gap-4 text-sm">
               <a
                 href="https://github.com/Harsh251005/"
                 target="_blank"
