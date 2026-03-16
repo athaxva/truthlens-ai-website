@@ -6,23 +6,27 @@ import { Eye, Zap, Lock, BarChart3 } from "lucide-react"
 const features = [
   {
     icon: Eye,
-    title: "Frame-by-Frame Analysis",
-    description: "Our AI examines every frame for micro-expressions, lighting inconsistencies, and artifacts invisible to the human eye."
+    title: "Frame-Level Analysis",
+    description:
+      "The detection model analyzes individual frames to identify visual artifacts, abnormal facial patterns, and inconsistencies commonly produced by deepfake generation models."
   },
   {
     icon: Zap,
-    title: "Real-Time Detection",
-    description: "Get instant results with our optimized inference engine. Analyze videos in seconds, not minutes."
+    title: "Fast AI Inference",
+    description:
+      "Optimized inference allows media to be analyzed quickly, making the system suitable for real-time or near real-time deepfake detection workflows."
   },
   {
     icon: Lock,
-    title: "Privacy-First",
-    description: "All processing happens locally or in encrypted environments. Your data never leaves your control."
+    title: "Privacy Aware Design",
+    description:
+      "The system is designed so that media analysis can run locally on-device or in controlled environments, minimizing unnecessary data exposure."
   },
   {
     icon: BarChart3,
-    title: "Detailed Reports",
-    description: "Receive comprehensive analysis with confidence scores, highlighted anomalies, and forensic evidence."
+    title: "Confidence-Based Results",
+    description:
+      "Detection results include confidence scores and analysis indicators to help users understand the likelihood of manipulated media."
   }
 ]
 
@@ -37,11 +41,16 @@ export function FeaturesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <p className="text-sm uppercase tracking-widest text-accent mb-4">How It Works</p>
+          <p className="text-sm uppercase tracking-widest text-accent mb-4">
+            System Capabilities
+          </p>
+
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-balance">
-            Detect deepfakes with
+            AI-powered media
             <br />
-            <span className="text-muted-foreground">surgical precision.</span>
+            <span className="text-muted-foreground">
+              deepfake detection.
+            </span>
           </h2>
         </motion.div>
 
@@ -58,8 +67,12 @@ export function FeaturesSection() {
               <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors duration-300">
                 <feature.icon className="w-6 h-6 text-foreground group-hover:text-accent transition-colors duration-300" />
               </div>
+
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+
+              <p className="text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>
