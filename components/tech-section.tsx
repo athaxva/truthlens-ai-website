@@ -30,10 +30,10 @@ const technologies = [
 ]
 
 const stats = [
-  { value: "99.2%", label: "Detection Accuracy" },
-  { value: "<2s", label: "Average Analysis Time" },
-  { value: "50M+", label: "Files Analyzed" },
-  { value: "120+", label: "Countries Served" }
+  { value: "AI Model", label: "Deepfake Detection Engine" },
+  { value: "Mobile AI", label: "TensorFlow Lite Deployment" },
+  { value: "Real-Time", label: "Media Analysis Pipeline" },
+  { value: "Research", label: "Prototype System" }
 ]
 
 export function TechSection() {
@@ -51,7 +51,7 @@ export function TechSection() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-balance">
             Built on proven
             <br />
-            <span className="text-muted-foreground">technology.</span>
+            <span className="text-muted-foreground">AI technology.</span>
           </h2>
         </motion.div>
 
