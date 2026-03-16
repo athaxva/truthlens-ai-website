@@ -4,10 +4,6 @@ import { motion } from "framer-motion"
 
 const technologies = [
   {
-    name: "PyTorch",
-    description: "Deep learning framework"
-  },
-  {
     name: "TensorFlow",
     description: "ML infrastructure"
   },
@@ -18,10 +14,6 @@ const technologies = [
   {
     name: "CUDA",
     description: "GPU acceleration"
-  },
-  {
-    name: "ONNX",
-    description: "Model optimization"
   },
   {
     name: "FastAPI",
@@ -85,7 +77,7 @@ export function TechSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
         >
           {technologies.map((tech, index) => (
             <motion.div
