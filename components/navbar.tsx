@@ -10,7 +10,7 @@ const navLinks = [
   { href: "#features", label: "Features" },
   { href: "#demo", label: "Demo" },
   { href: "#technology", label: "Technology" },
-  { href: "https://github.com/AtharvaPathak", label: "GitHub" },
+  { href: "/aboutthedev", label: "About the Dev" },
   { href: "#contact", label: "Contact" }
 ]
 
@@ -38,7 +38,7 @@ export function Navbar() {
         )}
       >
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-          <a href="#" className="text-xl font-semibold tracking-tight">
+          <a href="/" className="text-xl font-semibold tracking-tight">
             TRUTHLENS<span className="text-accent">.AI</span>
           </a>
 
@@ -49,8 +49,6 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                target={link.href.startsWith("http") ? "_blank" : undefined}
-                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
               >
                 {link.label}
               </a>
@@ -87,7 +85,7 @@ export function Navbar() {
             className="fixed inset-0 z-50 bg-background md:hidden"
           >
             <div className="px-6 h-20 flex items-center justify-between border-b border-border">
-              <a href="#" className="text-xl font-semibold tracking-tight">
+              <a href="/" className="text-xl font-semibold tracking-tight">
                 TRUTHLENS<span className="text-accent">.AI</span>
               </a>
               <Button
@@ -114,8 +112,6 @@ export function Navbar() {
                   transition={{ delay: 0.1 + index * 0.05 }}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block text-2xl font-medium hover:text-accent transition-colors"
-                  target={link.href.startsWith("http") ? "_blank" : undefined}
-                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
                   {link.label}
                 </motion.a>
