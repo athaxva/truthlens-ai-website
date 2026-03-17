@@ -3,17 +3,17 @@
 import { motion } from "framer-motion"
 import { ArrowLeft } from "lucide-react"
 import { Navbar } from "@/components/navbar"
+import { BRAND_NAME } from "@/lib/constants"
 
 export default function AboutTheDeveloper() {
   return (
     <>
-      {/* ✅ Navbar added */}
       <Navbar />
 
       <main className="min-h-screen px-6 py-32">
         <div className="max-w-5xl mx-auto">
 
-          {/* ✅ Back Button */}
+          {/* Back Button */}
           <div className="mb-10">
             <a
               href="/"
@@ -38,11 +38,11 @@ export default function AboutTheDeveloper() {
             <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight mb-6">
               Meet the developers behind
               <br />
-              <span className="text-muted-foreground">TRUTHLENS.AI</span>
+              <span className="text-muted-foreground">{BRAND_NAME}</span>
             </h1>
 
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              TRUTHLENS.AI is a deepfake detection project built using artificial
+              {BRAND_NAME} is a deepfake detection project built using artificial
               intelligence techniques to identify manipulated images and synthetic
               media.
             </p>
@@ -72,7 +72,7 @@ export default function AboutTheDeveloper() {
               </h2>
 
               <p className="text-sm text-accent mb-4">
-                Developer 1 • TRUTHLENS.AI
+                Developer 1 • {BRAND_NAME}
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -120,7 +120,7 @@ export default function AboutTheDeveloper() {
               </h2>
 
               <p className="text-sm text-accent mb-4">
-                Developer 2 • TRUTHLENS.AI
+                Developer 2 • {BRAND_NAME}
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
