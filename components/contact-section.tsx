@@ -90,7 +90,7 @@ export function ContactSection() {
 
               {/* Harsh Email */}
               <a
-                href="mailto:harshdd@gmail.com"
+                href="mailto:mailtoharshdd@gmail.com"
                 className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-card/50"
               >
                 <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
@@ -99,7 +99,7 @@ export function ContactSection() {
                 <div>
                   <p className="font-medium">Harsh Email</p>
                   <p className="text-sm text-muted-foreground">
-                    harshdd@gmail.com
+                    mailtoharshdd@gmail.com
                   </p>
                 </div>
               </a>
