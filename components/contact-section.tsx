@@ -28,11 +28,12 @@ export function ContactSection() {
 
       if (res.ok) {
         setIsSubmitted(true)
+        e.currentTarget.reset() // ✅ clears form
       } else {
-        alert("Something went wrong. Try again.")
+        console.error("Form submission failed")
       }
     } catch (error) {
-      alert("Error sending message.")
+      console.error("Error:", error)
     }
 
     setIsLoading(false)
@@ -41,165 +42,143 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-32 px-6">
       <div className="max-w-4xl mx-auto">
+
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <p className="text-sm uppercase tracking-widest text-accent mb-4">Contact</p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-balance">
+          <h2 className="text-4xl sm:text-5xl font-semibold">
             Get in touch
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-          
-          {/* Contact Links */}
+        <div className="grid lg:grid-cols-2 gap-12">
+
+          {/* LEFT SIDE */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
           >
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Have questions about TRUTHLENS.AI or want to collaborate on deepfake detection research? 
+            <p className="text-lg text-muted-foreground mb-8">
+              Have questions about TRUTHLENS.AI or want to collaborate?
               Feel free to contact us.
             </p>
 
             <div className="space-y-6">
 
-              <a 
-                href="mailto:atharva@atharvapathak.in" 
-                className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-card/50 transition-colors group"
+              {/* Atharva Email */}
+              <a
+                href="mailto:atharva@atharvapathak.in"
+                className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-card/50"
               >
-                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-accent/10">
+                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="font-medium">Email</p>
-                  <p className="text-sm text-muted-foreground">atharva@atharvapathak.in</p>
+                  <p className="font-medium">Atharva Email</p>
+                  <p className="text-sm text-muted-foreground">
+                    atharva@atharvapathak.in
+                  </p>
                 </div>
               </a>
 
-              <a 
+              {/* Harsh Email */}
+              <a
+                href="mailto:harshdd@gmail.com"
+                className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-card/50"
+              >
+                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="font-medium">Harsh Email</p>
+                  <p className="text-sm text-muted-foreground">
+                    harshdd@gmail.com
+                  </p>
+                </div>
+              </a>
+
+              {/* Atharva */}
+              <a
                 href="https://www.linkedin.com/in/atharvapathak"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-card/50 transition-colors group"
+                className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-card/50"
               >
-                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-accent/10">
+                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
                   <Linkedin className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="font-medium">Atharva Pathak</p>
-                  <p className="text-sm text-muted-foreground">Project Creator</p>
+                  <p className="text-sm text-muted-foreground">
+                    Developer 1
+                  </p>
                 </div>
               </a>
 
-              <a 
+              {/* Harsh */}
+              <a
                 href="https://www.linkedin.com/in/harsh-dharnidharka/"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-card/50 transition-colors group"
+                className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-card/50"
               >
-                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-accent/10">
+                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
                   <Linkedin className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="font-medium">Harsh Dharnidharka</p>
-                  <p className="text-sm text-muted-foreground">Project Partner</p>
+                  <p className="text-sm text-muted-foreground">
+                    Developer 2
+                  </p>
                 </div>
               </a>
 
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* RIGHT SIDE FORM */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6 }}
           >
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
-                
+
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Name</label>
-                    <Input
-                      name="name"
-                      placeholder="Your name"
-                      required
-                      className="h-12 rounded-xl bg-card border-border"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
-                    <Input
-                      type="email"
-                      name="email"
-                      placeholder="you@example.com"
-                      required
-                      className="h-12 rounded-xl bg-card border-border"
-                    />
-                  </div>
+                  <Input name="name" placeholder="Your name" required />
+                  <Input name="email" type="email" placeholder="Email" required />
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium mb-2">Subject</label>
-                  <Input
-                    name="subject"
-                    placeholder="What's this about?"
-                    required
-                    className="h-12 rounded-xl bg-card border-border"
-                  />
-                </div>
+                <Input name="subject" placeholder="Subject" required />
 
-                <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
-                  <Textarea
-                    name="message"
-                    placeholder="Tell us more..."
-                    rows={5}
-                    required
-                    className="rounded-xl bg-card border-border resize-none"
-                  />
-                </div>
+                <Textarea
+                  name="message"
+                  placeholder="Your message..."
+                  rows={5}
+                  required
+                />
 
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full h-14 text-base rounded-xl bg-foreground text-background hover:bg-foreground/90"
+                  className="w-full h-14"
                 >
-                  {isLoading ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      Send Message
-                      <Send className="ml-2 w-4 h-4" />
-                    </>
-                  )}
+                  {isLoading ? "Sending..." : "Send Message"}
+                  {!isLoading && <Send className="ml-2 w-4 h-4" />}
                 </Button>
 
               </form>
             ) : (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="flex flex-col items-center justify-center h-full text-center py-12"
-              >
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6">
-                  <CheckCircle2 className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-2">Message Sent!</h3>
-                <p className="text-muted-foreground">
-                  We'll get back to you as soon as possible.
-                </p>
-              </motion.div>
+              <div className="text-center py-12">
+                <CheckCircle2 className="w-10 h-10 text-green-500 mx-auto mb-4" />
+                <p className="text-lg">Message sent successfully.</p>
+              </div>
             )}
           </motion.div>
 
