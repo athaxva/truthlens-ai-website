@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { BRAND_NAME_PARTS } from "@/lib/constants"
 
 const navLinks = [
   { href: "#features", label: "Features" },
@@ -34,12 +35,17 @@ export function Navbar() {
         transition={{ duration: 0.6 }}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : "bg-transparent"
+          isScrolled
+            ? "bg-background/80 backdrop-blur-lg border-b border-border"
+            : "bg-transparent"
         )}
       >
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+          
+          {/* ✅ LOGO FIXED */}
           <a href="/" className="text-xl font-semibold tracking-tight">
-            TRUTHLENS<span className="text-accent">.AI</span>
+            {BRAND_NAME_PARTS.main}
+            <span className="text-accent">{BRAND_NAME_PARTS.accent}</span>
           </a>
 
           {/* Desktop nav */}
@@ -57,7 +63,9 @@ export function Navbar() {
             <Button 
               size="sm" 
               className="h-10 px-6 rounded-full bg-foreground text-background hover:bg-foreground/90"
-              onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               Try Demo
             </Button>
@@ -85,9 +93,13 @@ export function Navbar() {
             className="fixed inset-0 z-50 bg-background md:hidden"
           >
             <div className="px-6 h-20 flex items-center justify-between border-b border-border">
+              
+              {/* ✅ LOGO FIXED HERE TOO */}
               <a href="/" className="text-xl font-semibold tracking-tight">
-                TRUTHLENS<span className="text-accent">.AI</span>
+                {BRAND_NAME_PARTS.main}
+                <span className="text-accent">{BRAND_NAME_PARTS.accent}</span>
               </a>
+
               <Button
                 variant="ghost"
                 size="icon"
@@ -127,7 +139,7 @@ export function Navbar() {
                   className="w-full h-14 text-base rounded-full bg-foreground text-background hover:bg-foreground/90 mt-8"
                   onClick={() => {
                     setIsMobileMenuOpen(false)
-                    document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })
+                    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" })
                   }}
                 >
                   Try Demo
