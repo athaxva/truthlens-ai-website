@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Shield } from "lucide-react"
 import { motion } from "framer-motion"
+import { BRAND_NAME } from "@/lib/constants"
 
 export function HeroSection() {
   return (
@@ -18,17 +19,19 @@ export function HeroSection() {
       >
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 backdrop-blur-sm mb-8">
           <Shield className="w-4 h-4 text-accent" />
-          <span className="text-sm text-muted-foreground">AI-Powered Deepfake Detection</span>
+          <span className="text-sm text-muted-foreground">
+            AI-Powered Deepfake Detection
+          </span>
         </div>
 
-        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-semibold tracking-tight text-balance leading-[1.1] mb-8">
+        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-semibold tracking-tight leading-[1.1] mb-8">
           <span className="text-foreground">See through</span>
           <br />
           <span className="text-muted-foreground">the deception.</span>
         </h1>
 
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 text-pretty leading-relaxed">
-          TRUTHLENS.AI is an AI-powered system designed to detect manipulated images and deepfakes.
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+          {BRAND_NAME} is an AI-powered system designed to detect manipulated images and deepfakes.
           Using TensorFlow Lite for optimized inference and a FastAPI backend, the platform analyzes
           visual artifacts and inconsistencies to help identify synthetic media quickly and reliably.
         </p>
@@ -37,7 +40,9 @@ export function HeroSection() {
           <Button 
             size="lg" 
             className="h-14 px-8 text-base rounded-full bg-foreground text-background hover:bg-foreground/90"
-            onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() =>
+              document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Try Demo
             <ArrowRight className="ml-2 w-4 h-4" />
