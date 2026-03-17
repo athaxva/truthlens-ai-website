@@ -1,4 +1,5 @@
 import { Github, Linkedin, ExternalLink } from "lucide-react"
+import { BRAND_NAME_PARTS, BRAND_NAME } from "@/lib/constants"
 
 export function Footer() {
   return (
@@ -6,9 +7,11 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
+          {/* Logo + Info */}
           <div>
             <p className="text-xl font-semibold tracking-tight mb-2">
-              TRUTHLENS<span className="text-accent">.AI</span>
+              {BRAND_NAME_PARTS.main}
+              <span className="text-accent">{BRAND_NAME_PARTS.accent}</span>
             </p>
 
             <p className="text-sm text-muted-foreground">
@@ -68,7 +71,9 @@ export function Footer() {
 
         {/* Bottom section */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} TRUTHLENS.AI. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {BRAND_NAME}. All rights reserved.
+          </p>
 
           <div className="flex items-center gap-6">
 
