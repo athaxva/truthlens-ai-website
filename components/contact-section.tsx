@@ -11,12 +11,31 @@ export function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsLoading(true)
-    await new Promise(resolve => setTimeout(resolve, 1500))
+
+    const formData = new FormData(e.currentTarget)
+
+    try {
+      const res = await fetch("https://formspree.io/f/mzdjkpge", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+
+      if (res.ok) {
+        setIsSubmitted(true)
+      } else {
+        alert("Something went wrong. Try again.")
+      }
+    } catch (error) {
+      alert("Error sending message.")
+    }
+
     setIsLoading(false)
-    setIsSubmitted(true)
   }
 
   return (
@@ -51,12 +70,11 @@ export function ContactSection() {
 
             <div className="space-y-6">
 
-              {/* Email */}
               <a 
                 href="mailto:atharva@atharvapathak.in" 
                 className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-card/50 transition-colors group"
               >
-                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-accent/10">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -65,14 +83,13 @@ export function ContactSection() {
                 </div>
               </a>
 
-              {/* Your LinkedIn */}
               <a 
                 href="https://www.linkedin.com/in/atharvapathak"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-card/50 transition-colors group"
               >
-                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-accent/10">
                   <Linkedin className="w-5 h-5" />
                 </div>
                 <div>
@@ -81,14 +98,13 @@ export function ContactSection() {
                 </div>
               </a>
 
-              {/* Partner LinkedIn */}
               <a 
                 href="https://www.linkedin.com/in/harsh-dharnidharka/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-card/50 transition-colors group"
               >
-                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-accent/10">
                   <Linkedin className="w-5 h-5" />
                 </div>
                 <div>
@@ -109,11 +125,12 @@ export function ContactSection() {
           >
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
+                
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+                    <label className="block text-sm font-medium mb-2">Name</label>
                     <Input
-                      id="name"
+                      name="name"
                       placeholder="Your name"
                       required
                       className="h-12 rounded-xl bg-card border-border"
@@ -121,10 +138,10 @@ export function ContactSection() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+                    <label className="block text-sm font-medium mb-2">Email</label>
                     <Input
-                      id="email"
                       type="email"
+                      name="email"
                       placeholder="you@example.com"
                       required
                       className="h-12 rounded-xl bg-card border-border"
@@ -133,9 +150,9 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
+                  <label className="block text-sm font-medium mb-2">Subject</label>
                   <Input
-                    id="subject"
+                    name="subject"
                     placeholder="What's this about?"
                     required
                     className="h-12 rounded-xl bg-card border-border"
@@ -143,9 +160,9 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+                  <label className="block text-sm font-medium mb-2">Message</label>
                   <Textarea
-                    id="message"
+                    name="message"
                     placeholder="Tell us more..."
                     rows={5}
                     required
@@ -167,6 +184,7 @@ export function ContactSection() {
                     </>
                   )}
                 </Button>
+
               </form>
             ) : (
               <motion.div
@@ -178,7 +196,9 @@ export function ContactSection() {
                   <CheckCircle2 className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-2">Message Sent!</h3>
-                <p className="text-muted-foreground">{"We'll get back to you as soon as possible."}</p>
+                <p className="text-muted-foreground">
+                  We'll get back to you as soon as possible.
+                </p>
               </motion.div>
             )}
           </motion.div>
