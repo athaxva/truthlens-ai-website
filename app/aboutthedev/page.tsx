@@ -70,7 +70,7 @@ export default function AboutTheDeveloper() {
               </h2>
 
               <p className="text-sm text-accent mb-4">
-                AI Developer • TruthLensAI
+                Database Engineer, Tester & Backend Developer • TruthLensAI
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -119,7 +119,7 @@ export default function AboutTheDeveloper() {
               </h2>
 
               <p className="text-sm text-accent mb-4">
-                AI Developer • TruthLensAI
+                AI Engineer & Project Lead • TruthLensAI
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
