@@ -29,6 +29,7 @@ export function TechSection() {
         {/* Top Highlights */}
         <div className="grid sm:grid-cols-3 gap-8 mb-16 text-center">
 
+          {/* AI Model */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -41,18 +42,20 @@ export function TechSection() {
             </p>
           </motion.div>
 
+          {/* ✅ REPLACED Real-Time */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h3 className="text-2xl font-semibold mb-2">Real-Time</h3>
+            <h3 className="text-2xl font-semibold mb-2">Detection Pipeline</h3>
             <p className="text-muted-foreground text-sm">
-              Fast facial analysis pipeline for quick detection results
+              Structured workflow for processing images and detecting facial deepfakes
             </p>
           </motion.div>
 
+          {/* Research */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
