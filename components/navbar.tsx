@@ -8,11 +8,11 @@ import { cn } from "@/lib/utils"
 import { BRAND_NAME_PARTS } from "@/lib/constants"
 
 const navLinks = [
-  { href: "#features", label: "Features" },
-  { href: "#demo", label: "Demo" },
-  { href: "#technology", label: "Technology" },
+  { href: "/#features", label: "Features" },
+  { href: "/#demo", label: "Demo" },
+  { href: "/#technology", label: "Technology" },
   { href: "/aboutthedev", label: "About the Dev" },
-  { href: "#contact", label: "Contact" }
+  { href: "/#contact", label: "Contact" }
 ]
 
 export function Navbar() {
@@ -42,7 +42,7 @@ export function Navbar() {
       >
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
           
-          {/* ✅ LOGO FIXED */}
+          {/* LOGO */}
           <a href="/" className="text-xl font-semibold tracking-tight">
             {BRAND_NAME_PARTS.main}
             <span className="text-accent">{BRAND_NAME_PARTS.accent}</span>
@@ -60,12 +60,13 @@ export function Navbar() {
               </a>
             ))}
 
+            {/* ✅ FIXED BUTTON */}
             <Button 
               size="sm" 
               className="h-10 px-6 rounded-full bg-foreground text-background hover:bg-foreground/90"
-              onClick={() =>
-                document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => {
+                window.location.href = "/#demo"
+              }}
             >
               Try Demo
             </Button>
@@ -94,7 +95,7 @@ export function Navbar() {
           >
             <div className="px-6 h-20 flex items-center justify-between border-b border-border">
               
-              {/* ✅ LOGO FIXED HERE TOO */}
+              {/* LOGO */}
               <a href="/" className="text-xl font-semibold tracking-tight">
                 {BRAND_NAME_PARTS.main}
                 <span className="text-accent">{BRAND_NAME_PARTS.accent}</span>
@@ -129,6 +130,7 @@ export function Navbar() {
                 </motion.a>
               ))}
 
+              {/* ✅ FIXED MOBILE BUTTON */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -139,7 +141,7 @@ export function Navbar() {
                   className="w-full h-14 text-base rounded-full bg-foreground text-background hover:bg-foreground/90 mt-8"
                   onClick={() => {
                     setIsMobileMenuOpen(false)
-                    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" })
+                    window.location.href = "/#demo"
                   }}
                 >
                   Try Demo
