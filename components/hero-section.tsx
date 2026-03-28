@@ -20,7 +20,7 @@ export function HeroSection() {
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 backdrop-blur-sm mb-8">
           <Shield className="w-4 h-4 text-accent" />
           <span className="text-sm text-muted-foreground">
-            AI-Powered Deepfake Detection
+            AI-Powered Facial Deepfake Detection
           </span>
         </div>
 
@@ -31,9 +31,9 @@ export function HeroSection() {
         </h1>
 
         <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-          {BRAND_NAME} is an AI-powered system designed to detect manipulated images and deepfakes.
-          Using TensorFlow Lite for optimized inference and a FastAPI backend, the platform analyzes
-          visual artifacts and inconsistencies to help identify synthetic media quickly and reliably.
+          {BRAND_NAME} is an AI-powered system designed to detect manipulated human faces and facial deepfakes.
+          Using a FastAPI backend, the platform analyzes facial features and visual inconsistencies
+          to deliver fast and reliable detection.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
