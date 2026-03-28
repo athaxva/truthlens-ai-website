@@ -22,7 +22,7 @@ export function TechSection() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-balance">
             Built on proven
             <br />
-            <span className="text-muted-foreground">AI technology.</span>
+            <span className="text-muted-foreground">deep learning technology.</span>
           </h2>
         </motion.div>
 
@@ -37,7 +37,7 @@ export function TechSection() {
           >
             <h3 className="text-2xl font-semibold mb-2">AI Model</h3>
             <p className="text-muted-foreground text-sm">
-              Deepfake Detection Engine
+              Facial deepfake detection engine built using DL techniques
             </p>
           </motion.div>
 
@@ -49,7 +49,7 @@ export function TechSection() {
           >
             <h3 className="text-2xl font-semibold mb-2">Real-Time</h3>
             <p className="text-muted-foreground text-sm">
-              Media Analysis Pipeline
+              Fast facial analysis pipeline for quick detection results
             </p>
           </motion.div>
 
@@ -61,7 +61,7 @@ export function TechSection() {
           >
             <h3 className="text-2xl font-semibold mb-2">Research</h3>
             <p className="text-muted-foreground text-sm">
-              Prototype System
+              Experimental DL system focused on improving detection accuracy
             </p>
           </motion.div>
 
@@ -79,7 +79,7 @@ export function TechSection() {
           >
             <h4 className="text-lg font-semibold mb-2">TensorFlow</h4>
             <p className="text-sm text-muted-foreground">
-              ML infrastructure
+              Deep learning (DL) framework used for building and training the facial detection model
             </p>
           </motion.div>
 
@@ -92,7 +92,7 @@ export function TechSection() {
           >
             <h4 className="text-lg font-semibold mb-2">CUDA</h4>
             <p className="text-sm text-muted-foreground">
-              GPU acceleration
+              GPU acceleration technology used to speed up deep learning computations
             </p>
           </motion.div>
 
@@ -105,7 +105,7 @@ export function TechSection() {
           >
             <h4 className="text-lg font-semibold mb-2">FastAPI</h4>
             <p className="text-sm text-muted-foreground">
-              API framework
+              Backend framework used to handle API requests and serve model predictions
             </p>
           </motion.div>
 
