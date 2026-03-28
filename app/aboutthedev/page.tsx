@@ -3,11 +3,11 @@
 import { motion } from "framer-motion"
 import { ArrowLeft } from "lucide-react"
 import { Navbar } from "@/components/navbar"
-import { BRAND_NAME } from "@/lib/constants"
 
 export default function AboutTheDeveloper() {
   return (
     <>
+      {/* Navbar */}
       <Navbar />
 
       <main className="min-h-screen px-6 py-32">
@@ -38,13 +38,11 @@ export default function AboutTheDeveloper() {
             <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight mb-6">
               Meet the developers behind
               <br />
-              <span className="text-muted-foreground">{BRAND_NAME}</span>
+              <span className="text-muted-foreground">TruthLensAI</span>
             </h1>
 
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              {BRAND_NAME} is a deepfake detection project built using artificial
-              intelligence techniques to identify manipulated images and synthetic
-              media.
+              TruthLensAI is an AI-powered system designed to detect manipulated human faces and facial deepfakes using advanced machine learning techniques.
             </p>
           </motion.div>
 
@@ -72,12 +70,13 @@ export default function AboutTheDeveloper() {
               </h2>
 
               <p className="text-sm text-accent mb-4">
-                Developer 1 • {BRAND_NAME}
+                AI Developer • TruthLensAI
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Worked on designing and building the AI-powered deepfake detection
-                system, including model development, system architecture, and deployment.
+                Led backend development, database design, and website implementation for TruthLensAI.
+                Also handled system testing and contributed to the initial development of the deepfake detection model,
+                including architecture planning and early-stage experimentation.
               </p>
 
               <div className="flex justify-center gap-4 text-sm">
@@ -120,13 +119,13 @@ export default function AboutTheDeveloper() {
               </h2>
 
               <p className="text-sm text-accent mb-4">
-                Developer 2 • {BRAND_NAME}
+                AI Developer • TruthLensAI
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Collaborated on the design and implementation of the deepfake detection
-                system, contributing to backend development, AI model integration,
-                and deployment.
+                Focused on frontend development and user interface design for TruthLensAI.
+                Contributed to deepfake model development, optimization, and integration,
+                along with supporting system improvements across the application.
               </p>
 
               <div className="flex justify-center gap-4 text-sm">
