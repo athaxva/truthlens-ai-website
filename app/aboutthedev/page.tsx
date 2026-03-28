@@ -123,9 +123,7 @@ export default function AboutTheDeveloper() {
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Focused on frontend development and user interface design for TruthLensAI.
-                Contributed to deepfake model development, optimization, and integration,
-                along with supporting system improvements across the application.
+               Led the development of the deepfake detection system, focusing on model development, system architecture, and seamless integration of the AI pipeline into the application.
               </p>
 
               <div className="flex justify-center gap-4 text-sm">
