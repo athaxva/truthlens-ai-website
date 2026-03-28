@@ -6,27 +6,27 @@ import { Eye, Zap, Lock, BarChart3 } from "lucide-react"
 const features = [
   {
     icon: Eye,
-    title: "Frame-Level Analysis",
+    title: "Facial Frame Analysis",
     description:
-      "The detection model analyzes individual frames to identify visual artifacts, abnormal facial patterns, and inconsistencies commonly produced by deepfake generation models."
+      "The detection model analyzes facial regions in images to identify visual artifacts, abnormal facial structures, and inconsistencies commonly produced by deepfake generation models."
   },
   {
     icon: Zap,
     title: "Fast AI Inference",
     description:
-      "Optimized inference allows media to be analyzed quickly, making the system suitable for real-time or near real-time deepfake detection workflows."
+      "Optimized inference allows facial images to be analyzed quickly, making the system suitable for real-time or near real-time deepfake detection workflows."
   },
   {
     icon: Lock,
-    title: "Privacy Aware Design",
+    title: "Privacy-Aware Design",
     description:
-      "The system is designed so that media analysis can run locally on-device or in controlled environments, minimizing unnecessary data exposure."
+      "The system is designed so that facial analysis can run locally on-device or in controlled environments, minimizing unnecessary data exposure."
   },
   {
     icon: BarChart3,
     title: "Confidence-Based Results",
     description:
-      "Detection results include confidence scores and analysis indicators to help users understand the likelihood of manipulated media."
+      "Detection results include confidence scores and analysis indicators to help users understand the likelihood of manipulated human faces."
   }
 ]
 
@@ -46,7 +46,7 @@ export function FeaturesSection() {
           </p>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-balance">
-            AI-powered media
+            AI-powered facial
             <br />
             <span className="text-muted-foreground">
               deepfake detection.
